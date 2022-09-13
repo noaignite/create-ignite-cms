@@ -1,0 +1,8 @@
+*.md
+/.git
+/coverage
+/tmp
+/dist
+build
+node_modules
+yarn.lock

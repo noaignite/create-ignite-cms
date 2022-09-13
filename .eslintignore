@@ -1,0 +1,8 @@
+/.git
+/coverage
+/tmp
+/docker
+/dist
+.next
+build
+node_modules

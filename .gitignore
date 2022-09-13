@@ -1,0 +1,24 @@
+# The best pattern people should follow is ignoring the editors' files in their
+# global .gitignore configuration file.
+# However, in order to prevent issues. We also ignore editors' files here.
+.DS_STORE
+.idea
+.vscode
+.vercel
+
+/logs
+*.log
+*.tsbuildinfo
+/.eslintcache
+/.cache
+/dist
+/coverage
+/tmp
+.next
+.yalc
+build
+node_modules
+package-lock.json
+yalc.lock
+
+.env*

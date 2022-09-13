@@ -1,0 +1,53 @@
+{
+  "name": "create-ignite-cms",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "package.json",
+  "author": "janmysiak <jan.mysiak@noaignite.com>",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "sanity start",
+    "build": "sanity build",
+    "lint": "eslint . --cache --report-unused-disable-directives",
+    "lint:ci": "eslint . --report-unused-disable-directives",
+    "lint:fix": "eslint . --cache --fix",
+    "lint:staged": "lint-staged",
+    "prettier": "prettier . --check",
+    "prettier:fix": "prettier . --write"
+  },
+  "lint-staged": {
+    "*.js": [
+      "yarn lint:fix",
+      "git add --force"
+    ],
+    "*.json": [
+      "yarn prettier:fix",
+      "git add --force"
+    ]
+  },
+  "pre-commit": "lint:staged",
+  "dependencies": {
+    "@sanity/base": "^2.33.0",
+    "@sanity/core": "^2.33.0",
+    "@sanity/default-layout": "^2.33.0",
+    "@sanity/default-login": "^2.33.0",
+    "@sanity/desk-tool": "^2.33.0",
+    "@sanity/eslint-config-studio": "^2.0.0",
+    "@sanity/vision": "^2.33.0",
+    "eslint": "^8.6.0",
+    "prop-types": "^15.7",
+    "react": "^17.0",
+    "react-dom": "^17.0",
+    "styled-components": "^5.2.0"
+  },
+  "devDependencies": {
+    "lint-staged": "^13.0.3",
+    "pre-commit": "^1.2.2",
+    "prettier": "^2.7.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/noaignite/create-ignite-cms"
+  }
+}
